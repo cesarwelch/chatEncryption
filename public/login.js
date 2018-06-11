@@ -18,6 +18,7 @@ function login(argument) {
         }
     }
     $.ajax(settings).done(function(response) {
-        console.log(response);
+        document.cookie = "Authorization="+response;
+        window.location.href = 'chat'
     });
 }
